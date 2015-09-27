@@ -32,7 +32,11 @@ public class myPriorityQueue{
 			System.out.println("queue is empty");
 			return Integer.MIN_VALUE;
 		}
-		return list[1];
+		int maxVal = list[1];
+		list[1] = list[size];
+		size--;
+		heapDown(1);
+		return maxVal;
 	}
 	
 	public void insert(int x){
