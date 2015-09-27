@@ -67,6 +67,10 @@ public class myPriorityQueue{
 			else
 				break;
 		}
+		if(j==size && x<list[j]){
+			list[k] = list[j];
+			k = j;
+		}
 		list[k] = x;
 	}
 	
